@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Live Code Preview</title>
+</head>
+<body>
+    <textarea id="htmlCode" placeholder="Write HTML here"></textarea>
+    <textarea id="cssCode" placeholder="Write CSS here"></textarea>
+    <textarea id="jsCode" placeholder="Write JavaScript here"></textarea>
+    <button onclick="runCode()">Run</button>
+    <iframe id="preview"></iframe>
+
+    <script>
+        function runCode() {
+            const html = document.getElementById("htmlCode").value;
+            const css = `<style>${document.getElementById("cssCode").value}</style>`;
+            const js = `<script>${document.getElementById("jsCode").value}</script>`;
+            const iframe = document.getElementById("preview");
+
+            iframe.srcdoc = `<html><head>${css}</head><body>${html}${js}</body></html>`;
+        }
+    </script>
+</body>
+</html>
