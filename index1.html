@@ -3,16 +3,23 @@
 <head>
     <title>Live Code Preview</title>
     <style>
-        body { font-family: sans-serif; margin: 20px; }
-        textarea { width: 32%; height: 150px; margin-right: 1%; vertical-align: top; }
-        #preview { width: 100%; height: 300px; margin-top: 20px; border: 1px solid #ccc; }
+        body { font-family: sans-serif; margin: 20px; }        
+        #preview { width: 100%; height: 300px; 
+            margin-top: 20px; border: 1px solid #ccc; }
         button { margin-top: 10px; }
+        .txt {
+            width:32%;
+            height:150px;
+            display:inline-block;
+            margin-right: 1%; 
+            vertical-align: top;
+        }
     </style>
 </head>
 <body>
-    <textarea id="htmlCode" placeholder="Write HTML here"></textarea>
-    <textarea id="cssCode" placeholder="Write CSS here"></textarea>
-    <textarea id="jsCode" placeholder="Write JavaScript here"></textarea>
+    <textarea id="htmlCode" class="txt" placeholder="Write HTML here"></textarea>
+    <textarea id="cssCode" class="txt" placeholder="Write CSS here"></textarea>
+    <textarea id="jsCode" class="txt" placeholder="Write JavaScript here"></textarea>
     <br>
     <button onclick="runCode()">Run</button>
     <iframe id="preview" sandbox="allow-scripts allow-modals allow-same-origin"></iframe>
