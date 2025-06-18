@@ -22,9 +22,9 @@
     <textarea id="jsCode" class="txt" placeholder="Write JavaScript here"></textarea>
     <br>
     <button onclick="runCode()">Run</button>
-    <iframe id="preview" sandbox="allow-scripts allow-modals allow-same-origin"></iframe>
 
-    <script src="loader.js"></script>
+    <iframe id="preview" sandbox="allow-scripts allow-modals allow-same-origin"></iframe>
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/monaco-editor.min.js"></script>
     <script>
         function runCode() {
             const html = document.getElementById("htmlCode").value;
