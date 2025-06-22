@@ -106,8 +106,8 @@ class FCodeEditor extends HTMLElement {
     runBtn.onclick = () => {
       this.codeStore[currentLang] = this.editor.getValue();
       const html = this.codeStore['html'] || '';
-      const css = `<style>${this.codeStore['css'] || ''}</style>`;
-      const js = `<script>${this.codeStore['javascript'] || ''}<\/script>`;
+      //const css = `<style>${this.codeStore['css'] || ''}</style>`;
+      //const js = `<script>${this.codeStore['javascript'] || ''}<\/script>`;
       // Compose a full HTML document for preview
       preview.srcdoc = `
         ${html.includes('<html') ? html : `<html><head></head><body>${html}</body></html>`}

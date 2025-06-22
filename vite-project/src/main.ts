@@ -19,7 +19,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p class="read-the-docs">
       Click on the Vite and TypeScript logos to learn more
     </p>
-    <fcode-editor></fcode-editor>
+    <hr>
+    <div>
+      <fcode-editor></fcode-editor>
+    </div>
   </div>
 `
 
