@@ -2,4 +2,56 @@
 **/node_modules/
 **/vendor/
 
+# --- Rails Defaults ---
+**/.bundle
+**/db/*.sqlite3
+**/db/*.sqlite3-journal
+**/db/*.sqlite3-wal
+**/log/*
+**/tmp/*
+!**/log/.keep
+!**/tmp/.keep
 
+# --- Modern Rails 8+ Specifics ---
+**/public/assets
+**/public/packs
+**/public/packs-test
+**/yarn-error.log
+.yarn/cache
+.yarn/install-state.gz
+
+# --- Deployment & Secrets (CRITICAL) ---
+**/config/master.key
+**/config/credentials/*.key
+**/config/initializers/secret_token.rb
+.env
+.env*.local
+
+# --- Kamal (Deployment Tool) ---
+**/.kamal/secrets
+**/.kamal/env
+
+# --- Storage & Uploads ---
+**/storage/*
+!/storage/.keep
+**/public/system
+
+# --- Operating System & IDEs ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Testing ---
+**/coverage/
+**/spec/examples.txt
+
+# Ignore local gem installations
+/store/vendor/bundle/
+/store/vendor/cache/
+
+# Ensure custom third-party assets are tracked
+!/store/vendor/assets/
+!/store/vendor/javascript/
