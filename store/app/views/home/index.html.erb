@@ -1,1 +1,10 @@
 <h1>Hello World! Happy Holiday! 2026!</h1>
+<h2>This is a Ruby on Rails app</h2>
+
+<h1>Hello <%= @name %></h1>
+<h3>Shopping List</h3>
+<ul>
+  <% @items.each do |fruit| %>
+    <li>Buy: <%= fruit %></li>
+  <% end %>
+</ul>
